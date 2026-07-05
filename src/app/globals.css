@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/900.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+:root {
+  --background: #0a0a0b;
+  --foreground: #f2f0ea;
+  --muted: #98968f;
+  --card: #131315;
+  --border: #26262a;
+  --border-strong: #3a3a40;
+  --gold: #c9a15a;
+  --whatsapp: #2fb35c;
+  --whatsapp-hover: #279a4e;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-gold: var(--gold);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-hover: var(--whatsapp-hover);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.tracked {
+  letter-spacing: 0.14em;
+}
