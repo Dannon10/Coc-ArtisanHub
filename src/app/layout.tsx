@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Artisan hub",
-  description: "Discover skilled members in our community. View their work and reach them on WhatsApp.",
-};
+// export const metadata: Metadata = {
+//   title: "Artisan hub",
+//   description: "Discover skilled members in our community. View their work and reach them on WhatsApp.",
+// };
 
 export default function RootLayout({
   children,

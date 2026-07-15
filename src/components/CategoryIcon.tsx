@@ -1,12 +1,30 @@
-import { Shirt, Camera, Hammer, ChefHat, Brush, Monitor, LucideIcon } from "lucide-react";
+import {
+  Shirt,
+  Hammer,
+  ChefHat,
+  Monitor,
+  Frame,
+  PaintRoller,
+  Zap,
+  Footprints,
+  Printer,
+  Droplet,
+  Wrench,
+  LucideIcon,
+} from "lucide-react";
 
 const ICONS: Record<string, LucideIcon> = {
   Shirt,
-  Camera,
   Hammer,
   ChefHat,
-  Brush,
   Monitor,
+  Frame,
+  PaintRoller,
+  Zap,
+  Footprints,
+  Printer,
+  Droplet,
+  Wrench,
 };
 
 export default function CategoryIcon({ name, size = 14 }: { name: string; size?: number }) {

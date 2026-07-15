@@ -26,7 +26,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-border px-6 py-8 text-center">
-        <p className="tracked text-xs text-muted">Supporting one another &middot; the Church of Christ family</p>
+        <p className="tracked text-xs text-muted">Supporting one another &middot; The Church of Christ @ Ibudo Iya Ilorin, Kwara State</p>
       </footer>
     </div>
   );

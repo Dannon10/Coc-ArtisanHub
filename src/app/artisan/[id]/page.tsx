@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,6 +9,24 @@ import SocialLinks from "@/components/Sociallinks";
 import GalleryLightbox from "@/components/GalleryLightbox";
 import { artisans, getArtisanById } from "@/data/artisans";
 import { getCategoryBySlug } from "@/data/categories";
+import PortraitLightbox from "@/components/PortraitLightbox";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const artisan = getArtisanById(id);
+
+  if (!artisan) {
+    return {
+      title: "Church of Christ Artisan hub",
+      description: "Discover skilled members in our community. View their work and reach them on WhatsApp.",
+    };
+  }
+
+  return {
+    title: `${artisan.name} — ${artisan.specialty}`,
+    description: artisan.bio,
+  };
+}
 
 export function generateStaticParams() {
   return artisans.map((a) => ({ id: a.id }));
@@ -42,9 +61,7 @@ export default async function ArtisanPage({
           </Link>
 
           <div className="flex flex-col gap-6 border-b border-border pb-10 sm:flex-row">
-            <div className="relative h-40 w-40 flex-shrink-0 overflow-hidden rounded-2xl bg-black/40">
-              <Image src={artisan.portrait} alt={artisan.name} fill className="object-cover" />
-            </div>
+            <PortraitLightbox src={artisan.portrait} alt={artisan.name} />
             <div className="flex-1 pt-1">
               {category && (
                 <p className="tracked mb-3 text-xs font-medium uppercase text-gold">
