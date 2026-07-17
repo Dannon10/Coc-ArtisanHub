@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
-import WhatsappButton from "@/components/WhatsappButton";
+import WhatsappButton from "@/components/Whatsapp";
+import ShareButton from "@/components/ShareButton";
 import SocialLinks from "@/components/Sociallinks";
 import GalleryLightbox from "@/components/GalleryLightbox";
 import { artisans, getArtisanById } from "@/data/artisans";
@@ -60,7 +61,7 @@ export default async function ArtisanPage({
             Back
           </Link>
 
-          <div className="flex flex-col gap-6 border-b border-border pb-10 sm:flex-row">
+          <div className="flex flex-col gap-6 border-b border-border pb-10 sm:flex-row sm:items-stretch">
             <PortraitLightbox src={artisan.portrait} alt={artisan.name} />
             <div className="flex-1 pt-1">
               {category && (
@@ -81,7 +82,11 @@ export default async function ArtisanPage({
             <div>
               <p className="tracked mb-3 text-xs font-medium uppercase text-muted">About</p>
               <p className="mb-6 text-sm leading-relaxed text-foreground/90">{artisan.bio}</p>
-              <WhatsappButton whatsappNumber={artisan.whatsappNumber} artisanName={artisan.name} fullWidth />
+              <ShareButton
+                title={`${artisan.name} — ${artisan.specialty}`}
+                text={`Check out ${artisan.name}'s work on the Church of Christ Artisan hub`}
+                fullWidth
+              />
             </div>
 
             <div>

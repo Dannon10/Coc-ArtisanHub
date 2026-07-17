@@ -8,7 +8,7 @@ export default function Header() {
       </Link>
       <Link
         href="/preacher"
-        className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+        className="text-sm font-medium transition-colors hover:text-muted"
       >
         Preacher
       </Link>

@@ -8,9 +8,6 @@ export default function Home() {
 
       <main className="flex-1 px-6 py-16">
         <div className="mx-auto text-center">
-          <p className="tracked mb-4 text-xs font-medium uppercase text-gold">
-            Our church community
-          </p>
           <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">
             Our Skilled Members
           </h1>
@@ -26,7 +23,20 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-border px-6 py-8 text-center">
-        <p className="tracked text-xs text-muted">Supporting one another &middot; The Church of Christ @ Ibudo Iya Ilorin, Kwara State</p>
+        <p className="tracked text-sm text-muted">
+          Supporting one another &middot; The Church of Christ @ Ibudo Iya Ilorin, Kwara State
+        </p>
+        <p className="tracked mt-2 text-sm text-muted">
+          Developed by{" "}
+          <a
+            href="https://adannon.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline decoration-muted underline-offset-2 hover:text-gold"
+          >
+            Bro Dannon
+          </a>
+        </p>
       </footer>
     </div>
   );

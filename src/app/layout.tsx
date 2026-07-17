@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 
-// export const metadata: Metadata = {
-//   title: "Artisan hub",
-//   description: "Discover skilled members in our community. View their work and reach them on WhatsApp.",
-// };
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -12,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`h-full antialiased ${inter.variable} ${montserrat.variable}`}
+    >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

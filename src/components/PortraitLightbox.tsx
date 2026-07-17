@@ -22,7 +22,7 @@ export default function PortraitLightbox({
                 type="button"
                 onClick={openLightbox}
                 aria-label={`View ${alt} full screen`}
-                className="relative h-40 w-40 shrink-0 overflow-hidden rounded-2xl bg-black/40 transition-opacity hover:opacity-90 active:opacity-80"
+                className="relative w-40 shrink-0 overflow-hidden rounded-2xl bg-black/40 transition-opacity hover:opacity-90 active:opacity-80 sm:w-56 h-40 sm:h-auto"
                 style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
             >
                 <Image src={src} alt={alt} fill className="object-cover pointer-events-none" draggable={false} />
