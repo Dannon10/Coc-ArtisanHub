@@ -11,6 +11,7 @@ import {
   Droplet,
   Wrench,
   LucideIcon,
+  Flame,
 } from "lucide-react";
 
 const ICONS: Record<string, LucideIcon> = {
@@ -25,6 +26,7 @@ const ICONS: Record<string, LucideIcon> = {
   Printer,
   Droplet,
   Wrench,
+  Flame
 };
 
 export default function CategoryIcon({ name, size = 14 }: { name: string; size?: number }) {
