@@ -197,14 +197,14 @@ export const artisans: Artisan[] = [
     categorySlug: "printing",
     specialty: "Printing Press & Design",
     bio: "Bro Eguntola is an expert printing professional, specializing in offset and digital printing services. He delivers high-quality prints for both commercial and personal projects.",
-    whatsappNumber: "23435222914",
+    whatsappNumber: "2348035222914",
     portrait: "/images/artisans/bro_eguntola/egun.webp",
     gallery: [
       "/images/artisans/bro_eguntola/egun1.webp",
       "/images/artisans/bro_eguntola/egun2.webp",
       "/images/artisans/bro_eguntola/egun3.webp",
       "/images/artisans/bro_eguntola/egun4.webp",
-      "/images/artisans/bro_eguntola/egun5.webp",
+      "/images/artisans/bro_eguntola/egun6.webp",
     ],
   },
   {
